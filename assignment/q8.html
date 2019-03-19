@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 8.</title>
+</head>
+
+<body>
+    <h1>Question 8. Implement a linked list in es6 and implement addFirst() addLast(), length(), getFirst(), getLast().</h1>
+    <p>please check console</p>
+
+    <script>
+        class LinkedListimplementation {
+            constructor(array = []) {
+                    this.array = array;
+            }
+            length() {
+                return this.array.length
+            }
+            getFirst() {
+                if (this.array.length === 0) {
+                    console.log("empty linked list!!!")
+                }
+                return this.array[0];
+            }
+            getLast() {
+                if (this.array.length === 0) {
+                    console.log("empty linked list!!!")
+                }
+                return this.array[this.array.length - 1]
+            }
+            addFirst(value) {
+                return this.array.unshift(value);
+            }
+            addLast(value) {
+                return this.array.push(value);
+            }
+        }
+        //Testing linked list
+
+        var linkedlist = new LinkedListimplementation();
+        console.log("Added in Start : " + linkedlist.addFirst(2));
+        console.log("Added in Last : " + linkedlist.addLast(3));
+        console.log("Added in Last : " + linkedlist.addLast(1));
+        console.log("Added in First : " + linkedlist.addFirst(4));
+        console.log("First element : " + linkedlist.getFirst());
+        console.log("Last element : " + linkedlist.getLast());
+        console.log("Lenght : " + linkedlist.length());    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>question 1</title>
+    
+</head>
+
+<body>
+    <div>
+        <h1>Question 1. Filter unique array members using Set.</h1><br>
+    </div>
+    <script>
+        var array = [1, 1, 2, 5, 4, 3, 1, 2, 8, 9, 4, 6, 5, 4, 2, 3, 1, 7, 8, 4];
+        var newArray = new Set(array);
+        document.querySelector("div").innerText += `
+        given array is: [${array}]
+        `;
+        document.querySelector("div").innerText += `array after set is: [`;
+        for (value of newArray) {
+            document.querySelector("div").innerText += (value + ", ");
+        }
+
+        // var arr = [...new Set(array)];
+        // console.log("hel"+arr);
+        document.querySelector("div").innerText += `]`;
+
+    </script>
+</body>
+
+</html>

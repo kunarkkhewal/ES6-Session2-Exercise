@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>question 2</title>
+</head>
+
+<body>
+    <h1>Question 2. Find the possible combinations of a string and store them in a MAP </h1>
+    <p>check console for implementation</p>
+    <script>
+        function subsequence(input) {
+            if (input.length == 0) {
+                var sr = [];
+                sr.push("");
+                return sr;
+            }
+            var snew = [];
+            snew = subsequence(input.slice(1));
+            var final = [];
+            for (let i = 0; i < snew.length; i++) {
+                final.push(snew[i]);
+            }
+            for (let i = snew.length; i < snew.length * 2; i++) {
+                final.push(input.slice(0, 1) + snew[i - snew.length]);
+            }
+            return final;
+        }
+
+        var list = subsequence("abc");
+        console.log("given string : abc");
+
+        var map = new Map();
+
+        let i = 1;
+        list.forEach(element => {
+            map.set(i, element);
+            i++;
+        });
+        console.log("Map : ");
+        for (var [key, value] of map) {
+            console.log(key + ' = ' + value);
+        }
+
+    </script>
+</body>
+
+</html>

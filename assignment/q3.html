@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 3</title>
+</head>
+<body>
+    <h1>Question 3. Write a program to implement inheritance upto 3 classes.The Class must  public variables and static functions.</h1>
+    <p>check console</p>
+    <div></div>
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            static printPerson(){
+                return `${this.name} is ${this.age} years old`;
+            }
+        }
+
+        class Employee extends Person{
+            constructor(name,age,id){
+                super(name,age);
+                this.id = id;
+            }
+        }
+
+        class Developer extends Employee{
+            constructor(name,age,id,competency){
+                super(name,age,id);
+                this.competency = competency;
+            }
+        }
+
+        var dev = new Developer("Kunark",22,3288,"MEAN");
+        console.log(`name is: ${dev.name}, age is: ${dev.age}, id is: ${dev.id}, competancy is: ${dev.competency}`);
+        
+        document.querySelector("div").innerHTML = `name is: ${dev.name},  age is: ${dev.age},  id is: ${dev.id},  competancy is: ${dev.competency}`;
+    </script>
+</body>
+</html>

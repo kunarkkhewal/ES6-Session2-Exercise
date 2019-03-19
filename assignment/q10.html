@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 10</title>
+</head>
+
+<body>
+    <h1>Question 10. Implementation of stack</h1>
+    <p>check console for Implementation.</p>
+    <script>
+        class Stack {
+            constructor(arr = []) {
+                    this.arr = arr;
+            }
+            push(element) {
+                this.arr.push(element);
+                return this.arr;
+            }
+            pop(element) {
+                if (this.arr.length === 0) {
+                    alert("Empty array!!!")
+                }
+                return this.arr.pop();
+            }
+        }
+        //implementation
+
+        let stack = new Stack();
+        console.log(stack.push(1) + " : Pushed!");
+        console.log(stack.push(2) + " : Pushed!");
+        console.log(stack.push(3) + " : Pushed!");
+        
+
+
+        console.log(stack.pop() + " : Popped!");
+        console.log(stack.pop() + " : Popped!");
+
+        console.log("Stack image : ",stack);
+    </script>
+</body>
+
+</html>

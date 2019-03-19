@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 9</title>
+</head>
+<body>
+    <h1>Question 9. Implement Map and Set using Es6?</h1>
+    <p>check console for map Implementation</p>
+    <p>check console for set Implementation.</p>
+
+    <script>
+        console.log("!!!***Implementation of MAP***!!!")
+        var map = new Map();
+        var first = "string";
+        var second = {};
+        var third = function(){};
+        var fourth = NaN;
+
+        map.set(first, "Value of first");
+        map.set(second, "Value of second");
+        map.set(third, "Value of third");
+        map.set(fourth, "Value of fourth");
+
+        console.log("\nSize of Map: "+map.size);
+        console.log("\nfirst Key and its string using key name: "+ map.get(first));
+        console.log("first Key and its string using key value: "+ map.get("string"));
+
+        console.log("\nsecond Key and its string using key name: "+ map.get(second));
+        console.log("second Key and its string using key value: "+ map.get({}));
+
+        console.log("\nthird Key and its string using key name: "+ map.get(third));
+        console.log("\nfourth Key and its string using key name: "+ map.get(fourth));
+
+
+        console.log("\n\n!!!***Implementation of SET***!!!")
+
+        var set = new Set();
+        console.log("adding : " , set.add(1));
+        console.log("adding : " , set.add(2));
+        console.log("adding : " , set.add(2));
+        console.log("adding : " , set.add(1));
+        console.log("adding : " , set.add(3));
+        console.log("set has 3?: " + set.has(3));
+        console.log("Size of SET : ", set.size);
+        console.log("Deleting 1 : " , set.delete(1));
+        console.log("Current state of SET : ", set)
+
+    </script>
+</body>
+</html>
